@@ -8,16 +8,22 @@
     <title>Club Communication Digitale</title>
     <meta content name="description">
     <meta content name="keywords">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" type="image/x-icon" href="./ccd.jpeg">
 
     <!-- Favicons -->
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
       rel="stylesheet">
-
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap" rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -35,12 +41,11 @@
     <header id="header" class="fixed-top d-flex align-items-cente">
       <div
         class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
-        <h3 class="logo me-auto me-lg-0"><a href="index.html">Club Communication
-            Digitale</a></h3>
+        <h6 class="logo me-auto me-lg-0"><a href="index.html">CCD</a></h6>
         <nav id="navbar" class="navbar order-last order-lg-0">
           <ul>
             <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="#contact">Commande</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -53,7 +58,7 @@
         data-aos="zoom-in" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-8">
-            <h6>Bienvenue au <span class="text-primary">ITNIGHMARE</span></h6>
+            <h1>Bienvenue au <span class="text-primary">ITNIGHMARE</span></h1>
           </div>
           <div
             class="col-lg-4 d-flex align-items-center justify-content-center position-relative"
@@ -151,27 +156,30 @@
                   <p>Repas</p>
                 </div>
 
-                <form class="php-email-form">
+                <form class="php-email-form" id="form">
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="text" name="name" class="form-control"
-                        id="name" placeholder="Nom" required>
+                      <input type="text" name="from_name" class="form-control"
+                        id="name from_name" placeholder="Nom" required>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 form-group">
-                      <input type="text" name="ranger" class="form-control"
-                        id="ranger" placeholder="Entrez votre rangée" required>
+                      <input type="number" name="ranger to_name"
+                        class="form-control"
+                        id="ranger to_name" placeholder="Entrez votre rangée"
+                        required>
                     </div>
                   </div>
 
                   <div class="form-group mt-3">
-                    <textarea class="form-control" name="message" rows="8"
+                    <textarea id="message" class="form-control"
+                      name="message message" rows="8"
                       placeholder="Entrez les détails de votre commande"
                       required></textarea>
                   </div>
 
-                  <div class="text-center"><button type="submit">Valider</button></div>
+                  <div class="text-center"><button id="button" type="submit">Valider</button></div>
                 </form>
 
               </div>
@@ -190,9 +198,20 @@
       <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
       <script src="assets/vendor/php-email-form/validate.js"></script>
       <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
       <!-- Template Main JS File -->
       <script src="assets/js/main.js"></script>
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+      <script type="text/javascript">
+  emailjs.init('pF-hBpUlU8wM00yaI')
+</script>
+
+      <script src="./js/mail.js"></script>
+      <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
     </body>
 
